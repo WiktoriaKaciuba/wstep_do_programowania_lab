@@ -31,12 +31,12 @@ else: #jeśli nie jest to drukuje to drukuje wiadomość
 
 #------------------------------------------------------ZAD4
 gol = int(input("Wprowadź liczbę zdobytych bramek: "))
-gol_pkt = 10*gol
+gol_pkt = 10*gol #punkty naliczane za każdego gola
 bonus=0
 
-if gol >10:
+if gol >10: #punkty bonusowe zależnie od liczby bramek
     bonus = 10
-    wynik = gol_pkt + bonus
+    wynik = gol_pkt + bonus    
     print(f"Drużyna zdobywa {bonus} punktów bonusowych i {wynik} punktów całościowo")
 elif gol >5:
     bonus = 5
@@ -45,7 +45,7 @@ elif gol >5:
 
 #------------------------------------------------------ZAD4A
 gol = int(input("Wprowadź liczbę zdobytych bramek: "))
-gol_pkt = 10*gol
+gol_pkt = 10*gol  
 bonus=0
 
 if gol>=5:
@@ -64,13 +64,13 @@ gol = int(input("Wprowadź liczbę zdobytych bramek: "))
 gol_pkt = 10*gol
 bonus=0
 
-def gole():
+def gole(): #stworzenie funkcji, która pozwala na wykonanie zadania
     if gol>=5:
-        global bonus
+        global bonus #ustawienie zmiennej bonus na globalną, co pozwala na wykorzystanie jej poza funkcją
         bonus = 5
         wynik = gol_pkt + bonus
         if  gol >10:
-            bonus += 10
+            bonus += 10  #dodanie punktów do zmiennej bonus
             wynik = gol_pkt + bonus
             print(f"Drużyna zdobwywa {bonus} punktów bonusowych i {wynik} punktów całościowo")
         else:
@@ -78,7 +78,7 @@ def gole():
     else:
         print("Drużyna zdobywa 0 punktów bonusowych")
 
-gole()
+gole() #wywołanie funkcji
 
 
 #------------------------------------------------------ZAD5A
@@ -109,5 +109,5 @@ print("Dwa ostatnie znaki w tekście" + text[-2:])    #wyświetla 2 ostatnie zna
 
 #------------------------------------------------------ZAD9
 tekst = (input("Wpisz tekst: "))
-zmiana = tekst.swapcase()
+zmiana = tekst.swapcase() #zmiana wielkości liter w tekście wpisanym przez użytkownika
 print(zmiana)
